@@ -1,0 +1,3661 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="Search and book appointments with qualified lawyers online. Browse lawyer profiles, read reviews, check availability and schedule legal consultations instantly.">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="">
+
+      <!-- Alpine.js - Load first -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      
+      <!-- Font Links -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <title>LegalConnect - Find & Book Lawyers Online | Legal Appointment Booking</title>
+      <!-- SEO Description -->
+      <meta name="description" content="Search and book appointments with qualified lawyers online. Browse lawyer profiles, read reviews, check availability and schedule legal consultations instantly.">
+
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Core CSS and Scripts -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      
+      <!-- Project-specific styles -->
+      <style>
+        /* Base styles */
+        :root {
+          --primary-color: #1E40AF;
+          --secondary-color: #64748B;
+          --accent-color: ;
+        }
+
+        /* Strict no-scrollbar rules */
+        * {
+          -ms-overflow-style: none !important;  /* IE and Edge */
+          scrollbar-width: none !important;     /* Firefox */
+        }
+        *::-webkit-scrollbar {
+          display: none !important;             /* Chrome, Safari and Opera */
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Inter, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: Inter, Inter, system-ui, sans-serif;
+        }
+
+        /* Interactive elements */
+        .interactive-element {
+          transition: all 0.3s ease;
+        }
+        .interactive-element:hover {
+          transform: translateY(-2px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .fade-in {
+          animation: fadeIn 0.5s ease-in-out;
+        }
+      </style>
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="robots" content="">
+      <meta property="og:title" content="">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="LegalConnect">
+      
+      <!-- Favicon -->
+      <link rel="icon" type="image/x-icon" href="">
+
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Project Configuration -->
+      <script>
+        window.projectConfig = {
+          name: 'LegalConnect',
+          type: '',
+          settings: {
+            colors: {
+              primary: '#1E40AF',
+              secondary: '#64748B',
+              accent: ''
+            },
+            fonts: {
+              primary: 'Inter',
+              secondary: 'Inter'
+            }
+          }
+        };
+      </script>
+   <style>
+        [data-section-id] {
+          display: none;
+        }
+        [data-section-id]:first-child {
+          display: block;
+        }
+      </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <mountpoint><div id="RolloutPageContent">
+<div id="root" class="flex h-screen bg-gray-100">
+  <!-- Sidebar Navigation -->
+  <div x-data="{ isOpen: false }" class="relative">
+    <nav class="fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0" :class="{ '-translate-x-full': !isOpen, 'translate-x-0': isOpen }">
+      <!-- Logo Section -->
+      <div class="flex items-center justify-center h-16 px-4 border-b border-gray-200">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-gray-900">LegalFind</span>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <div class="flex flex-col h-full">
+        <nav class="flex-1 px-4 py-6 space-y-2">
+          <a href="#dashboard" class="flex items-center px-4 py-3 text-sm font-medium text-white bg-blue-600 rounded-lg transition-colors duration-200">
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+            </svg>
+            Dashboard
+          </a>
+
+          <a href="#search" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+            </svg>
+            Search
+          </a>
+
+          <a href="#lawyer-profile" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+            </svg>
+            Lawyer Profile
+          </a>
+
+          <a href="#booking" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+            </svg>
+            Booking
+          </a>
+
+          <a href="#appointments" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+            </svg>
+            Appointments
+          </a>
+
+          <a href="#messages" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            Messages
+          </a>
+
+          <a href="#user-profile" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+            </svg>
+            User Profile
+          </a>
+
+          <a href="#notifications" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+            </svg>
+            Notifications
+          </a>
+        </nav>
+
+        <!-- User Profile Section -->
+        <div class="px-4 py-4 border-t border-gray-200">
+          <div x-data="{ profileOpen: false }" class="relative">
+            <button @click="profileOpen = !profileOpen" class="flex items-center w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              <img class="w-8 h-8 mr-3 rounded-full" src="https://avatar.iran.liara.run/public/42" alt="User Avatar">
+              <div class="flex-1 text-left">
+                <div class="text-sm font-medium text-gray-900">John Doe</div>
+                <div class="text-xs text-gray-500">john@example.com</div>
+              </div>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200" :class="{ 'rotate-180': profileOpen }" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+
+            <!-- Profile Dropdown -->
+            <div x-show="profileOpen" x-cloak @click.away="profileOpen = false" x-transition:enter="transition ease-out duration-100 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75 transform" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute bottom-full left-0 w-full mb-2 bg-white border border-gray-200 rounded-lg shadow-lg">
+              <div class="py-1">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help</a>
+                <div class="border-t border-gray-100"></div>
+                <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">Sign out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button type="button" @click="isOpen = !isOpen" :aria-expanded="isOpen" aria-controls="mobile-menu" class="fixed top-4 left-4 z-50 lg:hidden p-2 rounded-lg bg-white border border-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200">
+      <svg x-show="!isOpen" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg x-show="isOpen" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div x-show="isOpen" x-cloak @click.away="isOpen = false" @resize.window="if (window.innerWidth > 1024) isOpen = false" x-transition:enter="transition ease-out duration-100 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75 transform" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" id="mobile-menu" class="fixed inset-0 z-40 bg-black bg-opacity-50 backdrop-blur-sm lg:hidden">
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 overflow-y-auto">
+    <MountPoint>
+
+
+<section id="dashboard" class="min-h-screen bg-gray-50 p-6">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Dashboard</h1>
+    <p class="text-gray-600">Welcome back! Here's your legal consultation overview.</p>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="flex items-center">
+        <div class="p-2 bg-blue-100 rounded-lg">
+          <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-600">Total Appointments</p>
+          <p class="text-2xl font-bold text-gray-900">24</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="flex items-center">
+        <div class="p-2 bg-green-100 rounded-lg">
+          <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-600">Completed</p>
+          <p class="text-2xl font-bold text-gray-900">18</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="flex items-center">
+        <div class="p-2 bg-yellow-100 rounded-lg">
+          <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-600">Pending</p>
+          <p class="text-2xl font-bold text-gray-900">4</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="flex items-center">
+        <div class="p-2 bg-purple-100 rounded-lg">
+          <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-600">Lawyers Consulted</p>
+          <p class="text-2xl font-bold text-gray-900">12</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Recent Appointments -->
+    <div class="lg:col-span-2 bg-white rounded-lg border border-gray-200 p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-gray-900">Recent Appointments</h2>
+        <a href="#appointments" class="text-blue-600 hover:text-blue-700 text-sm font-medium">View All</a>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="flex items-center p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+          <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/1" alt="Lawyer">
+          <div class="ml-4 flex-1">
+            <h3 class="text-sm font-medium text-gray-900">Dr. Sarah Johnson</h3>
+            <p class="text-sm text-gray-500">Corporate Law Specialist</p>
+            <p class="text-xs text-gray-400">Today, 2:00 PM</p>
+          </div>
+          <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Confirmed</span>
+        </div>
+
+        <div class="flex items-center p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+          <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/2" alt="Lawyer">
+          <div class="ml-4 flex-1">
+            <h3 class="text-sm font-medium text-gray-900">Mr. David Chen</h3>
+            <p class="text-sm text-gray-500">Family Law Attorney</p>
+            <p class="text-xs text-gray-400">Tomorrow, 10:00 AM</p>
+          </div>
+          <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">Pending</span>
+        </div>
+
+        <div class="flex items-center p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+          <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/3" alt="Lawyer">
+          <div class="ml-4 flex-1">
+            <h3 class="text-sm font-medium text-gray-900">Ms. Emily Rodriguez</h3>
+            <p class="text-sm text-gray-500">Criminal Defense Lawyer</p>
+            <p class="text-xs text-gray-400">Dec 15, 3:30 PM</p>
+          </div>
+          <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">Scheduled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <h2 class="text-xl font-bold text-gray-900 mb-6">Quick Actions</h2>
+      
+      <div class="space-y-3">
+        <button class="w-full flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+          </svg>
+          Find a Lawyer
+        </button>
+
+        <button class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+          </svg>
+          Schedule Appointment
+        </button>
+
+        <button class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+          </svg>
+          View Messages
+        </button>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="mt-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Recent Activity</h3>
+        <div class="space-y-3">
+          <div class="flex items-start">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3"></div>
+            <div>
+              <p class="text-sm text-gray-900">Appointment confirmed with Dr. Sarah Johnson</p>
+              <p class="text-xs text-gray-500">2 hours ago</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+            <div>
+              <p class="text-sm text-gray-900">Payment processed for consultation</p>
+              <p class="text-xs text-gray-500">1 day ago</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3"></div>
+            <div>
+              <p class="text-sm text-gray-900">New message from Mr. David Chen</p>
+              <p class="text-xs text-gray-500">2 days ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appointment Statistics Chart -->
+  <div class="mt-8 bg-white rounded-lg border border-gray-200 p-6">
+    <h2 class="text-xl font-bold text-gray-900 mb-6">Appointment Trends</h2>
+    <div class="h-64">
+      <canvas id="appointmentChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Appointment Trends Chart
+const ctx = document.getElementById('appointmentChart').getContext('2d');
+const appointmentChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+            label: 'Appointments',
+            data: [12, 19, 8, 15, 22, 18],
+            borderColor: '#3B82F6',
+            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.4
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.1)'
+                }
+            },
+            x: {
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.1)'
+                }
+            }
+        },
+        elements: {
+            point: {
+                radius: 4,
+                hoverRadius: 6
+            }
+        }
+    }
+});
+</script>
+
+
+<section id="search" class="min-h-screen bg-gray-50 p-6">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Search</h1>
+    <p class="text-gray-600">Find the perfect lawyer for your legal needs.</p>
+  </div>
+
+  <!-- Search Form -->
+  <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Practice Area</label>
+        <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option>All Practice Areas</option>
+          <option>Corporate Law</option>
+          <option>Family Law</option>
+          <option>Criminal Defense</option>
+          <option>Personal Injury</option>
+          <option>Real Estate</option>
+          <option>Immigration</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+        <input type="text" placeholder="Enter city or zip code" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Experience</label>
+        <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option>Any Experience</option>
+          <option>1-5 years</option>
+          <option>5-10 years</option>
+          <option>10+ years</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="flex flex-col sm:flex-row gap-4">
+      <div class="flex-1">
+        <input type="text" placeholder="Search by lawyer name or keyword..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+        </svg>
+        Search Lawyers
+      </button>
+    </div>
+  </div>
+
+  <!-- Filters and Results Header -->
+  <div class="flex flex-col lg:flex-row gap-6">
+    <!-- Filters Sidebar -->
+    <div class="lg:w-1/4">
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Filters</h3>
+        
+        <!-- Rating Filter -->
+        <div class="mb-6">
+          <h4 class="text-sm font-medium text-gray-700 mb-3">Rating</h4>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">5 stars</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">4+ stars</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">3+ stars</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Price Range -->
+        <div class="mb-6">
+          <h4 class="text-sm font-medium text-gray-700 mb-3">Consultation Fee</h4>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">Free consultation</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">Under 
+          <!-- Content will be injected here -->
+        00</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">
+          <!-- Content will be injected here -->
+        00 - $200</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">$200+</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="mb-6">
+          <h4 class="text-sm font-medium text-gray-700 mb-3">Availability</h4>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">Available today</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">This week</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">Next week</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="w-full px-4 py-2 text-sm text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+          Clear All Filters
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Results -->
+    <div class="lg:w-3/4">
+      <!-- Results Header -->
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <p class="text-gray-600">Showing 24 lawyers in your area</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <span class="text-sm text-gray-600">Sort by:</span>
+          <select class="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <option>Relevance</option>
+            <option>Rating</option>
+            <option>Experience</option>
+            <option>Price</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Lawyer Cards -->
+      <div class="space-y-6">
+        <!-- Lawyer Card 1 -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-200">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <img class="w-24 h-24 rounded-full mx-auto md:mx-0" src="https://avatar.iran.liara.run/public/4" alt="Dr. Sarah Johnson">
+            </div>
+            <div class="md:w-3/4 md:pl-6">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-gray-900 mb-1">Dr. Sarah Johnson</h3>
+                  <p class="text-blue-600 font-medium mb-2">Corporate Law Specialist</p>
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-600">4.9 (127 reviews)</span>
+                  </div>
+                  <p class="text-gray-600 mb-3">15+ years experience in corporate mergers, acquisitions, and business law. Harvard Law graduate.</p>
+                  <div class="flex flex-wrap gap-2 mb-3">
+                    <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Corporate Law</span>
+                    <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">M&A</span>
+                    <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Business Law</span>
+                  </div>
+                  <div class="flex items-center text-sm text-gray-600">
+                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    New York, NY
+                  </div>
+                </div>
+                <div class="mt-4 md:mt-0 md:ml-6 text-right">
+                  <p class="text-2xl font-bold text-gray-900 mb-1">
+          <!-- Content will be injected here -->
+        50</p>
+                  <p class="text-sm text-gray-600 mb-4">consultation</p>
+                  <button class="w-full md:w-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    Book Consultation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lawyer Card 2 -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-200">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <img class="w-24 h-24 rounded-full mx-auto md:mx-0" src="https://avatar.iran.liara.run/public/5" alt="Mr. David Chen">
+            </div>
+            <div class="md:w-3/4 md:pl-6">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-gray-900 mb-1">Mr. David Chen</h3>
+                  <p class="text-blue-600 font-medium mb-2">Family Law Attorney</p>
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 text-gray-300 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-600">4.7 (89 reviews)</span>
+                  </div>
+                  <p class="text-gray-600 mb-3">Specializing in divorce, child custody, and adoption cases. Compassionate approach with 12 years experience.</p>
+                  <div class="flex flex-wrap gap-2 mb-3">
+                    <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Family Law</span>
+                    <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Divorce</span>
+                    <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Child Custody</span>
+                  </div>
+                  <div class="flex items-center text-sm text-gray-600">
+                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Los Angeles, CA
+                  </div>
+                </div>
+                <div class="mt-4 md:mt-0 md:ml-6 text-right">
+                  <p class="text-2xl font-bold text-gray-900 mb-1">
+          <!-- Content will be injected here -->
+        20</p>
+                  <p class="text-sm text-gray-600 mb-4">consultation</p>
+                  <button class="w-full md:w-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    Book Consultation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lawyer Card 3 -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-200">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <img class="w-24 h-24 rounded-full mx-auto md:mx-0" src="https://avatar.iran.liara.run/public/6" alt="Ms. Emily Rodriguez">
+            </div>
+            <div class="md:w-3/4 md:pl-6">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-gray-900 mb-1">Ms. Emily Rodriguez</h3>
+                  <p class="text-blue-600 font-medium mb-2">Criminal Defense Lawyer</p>
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-600">4.8 (156 reviews)</span>
+                  </div>
+                  <p class="text-gray-600 mb-3">Aggressive defense attorney with 18 years experience. Specializes in white-collar crime and DUI cases.</p>
+                  <div class="flex flex-wrap gap-2 mb-3">
+                    <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Criminal Defense</span>
+                    <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">DUI</span>
+                    <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">White Collar</span>
+                  </div>
+                  <div class="flex items-center text-sm text-gray-600">
+                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Chicago, IL
+                  </div>
+                </div>
+                <div class="mt-4 md:mt-0 md:ml-6 text-right">
+                  <p class="text-2xl font-bold text-gray-900 mb-1">$200</p>
+                  <p class="text-sm text-gray-600 mb-4">consultation</p>
+                  <button class="w-full md:w-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    Book Consultation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex items-center justify-center mt-8">
+        <nav class="flex items-center space-x-2">
+          <button class="px-3 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <button class="px-3 py-2 bg-blue-600 text-white rounded-lg">1</button>
+          <button class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">2</button>
+          <button class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">3</button>
+          <span class="px-3 py-2 text-gray-500">...</span>
+          <button class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">8</button>
+          <button class="px-3 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="lawyer-profile" class="min-h-screen bg-gray-50 p-6">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Lawyer Profile</h1>
+    <p class="text-gray-600">Detailed information about your selected lawyer.</p>
+  </div>
+
+  <!-- Profile Content -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Main Profile Info -->
+    <div class="lg:col-span-2 space-y-6">
+      <!-- Basic Info Card -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="flex flex-col md:flex-row items-start">
+          <div class="mb-4 md:mb-0 md:mr-6">
+            <img class="w-32 h-32 rounded-full" src="https://avatar.iran.liara.run/public/7" alt="Dr. Sarah Johnson">
+          </div>
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sarah Johnson</h2>
+            <p class="text-blue-600 font-medium text-lg mb-3">Corporate Law Specialist</p>
+            <div class="flex items-center mb-3">
+              <div class="flex text-yellow-400">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </div>
+              <span class="ml-2 text-gray-600">4.9 (127 reviews)</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Corporate Law</span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">M&A</span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Business Law</span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Securities</span>
+            </div>
+            <div class="flex items-center text-gray-600 mb-2">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              New York, NY
+            </div>
+            <div class="flex items-center text-gray-600">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              15+ years experience
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">About</h3>
+        <p class="text-gray-600 mb-4">
+          Dr. Sarah Johnson is a highly experienced corporate law attorney with over 15 years of practice in mergers and acquisitions, 
+          business formation, and securities law. She graduated magna cum laude from Harvard Law School and has been recognized as 
+          one of the top corporate lawyers in New York.
+        </p>
+        <p class="text-gray-600">
+          Her expertise includes complex corporate transactions, regulatory compliance, and strategic business counsel for Fortune 500 
+          companies and emerging startups. She is known for her meticulous attention to detail and client-focused approach.
+        </p>
+      </div>
+
+      <!-- Education & Credentials -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Education & Credentials</h3>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-4"></div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Juris Doctor (J.D.)</h4>
+              <p class="text-gray-600">Harvard Law School, 2008</p>
+              <p class="text-sm text-gray-500">Magna Cum Laude, Law Review Editor</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-4"></div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Bachelor of Arts in Economics</h4>
+              <p class="text-gray-600">Yale University, 2005</p>
+              <p class="text-sm text-gray-500">Summa Cum Laude, Phi Beta Kappa</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-4"></div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Bar Admissions</h4>
+              <p class="text-gray-600">New York State Bar, 2008</p>
+              <p class="text-gray-600">U.S. District Court, Southern District of NY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Section -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-xl font-bold text-gray-900">Client Reviews</h3>
+          <button onclick="openReviewModal()" class="text-blue-600 hover:text-blue-700 text-sm font-medium">Write a Review</button>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="border-b border-gray-100 pb-6">
+            <div class="flex items-start">
+              <img class="w-10 h-10 rounded-full mr-4" src="https://avatar.iran.liara.run/public/8" alt="Client">
+              <div class="flex-1">
+                <div class="flex items-center mb-2">
+                  <h4 class="font-semibold text-gray-900 mr-2">Michael Thompson</h4>
+                  <div class="flex text-yellow-400">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  </div>
+                </div>
+                <p class="text-gray-600 mb-2">
+                  Excellent service! Dr. Johnson handled our company merger with exceptional professionalism and attention to detail. 
+                  Highly recommend her expertise in corporate law.
+                </p>
+                <p class="text-sm text-gray-500">2 weeks ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-gray-100 pb-6">
+            <div class="flex items-start">
+              <img class="w-10 h-10 rounded-full mr-4" src="https://avatar.iran.liara.run/public/9" alt="Client">
+              <div class="flex-1">
+                <div class="flex items-center mb-2">
+                  <h4 class="font-semibold text-gray-900 mr-2">Jennifer Lee</h4>
+                  <div class="flex text-yellow-400">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 text-gray-300 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  </div>
+                </div>
+                <p class="text-gray-600 mb-2">
+                  Very knowledgeable and responsive. She guided us through complex securities regulations with ease. 
+                  Would definitely work with her again.
+                </p>
+                <p class="text-sm text-gray-500">1 month ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="space-y-6">
+      <!-- Booking Card -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="text-center mb-6">
+          <p class="text-3xl font-bold text-gray-900 mb-1">
+          <!-- Content will be injected here -->
+        50</p>
+          <p class="text-gray-600">consultation fee</p>
+        </div>
+        
+        <button onclick="openBookingModal()" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 mb-4">
+          Book Consultation
+        </button>
+        
+        <button class="w-full px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200 mb-4">
+          Send Message
+        </button>
+        
+        <div class="text-center">
+          <p class="text-sm text-gray-600 mb-2">Available Today</p>
+          <p class="text-sm text-green-600 font-medium">Next slot: 2:00 PM</p>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-lg font-bold text-gray-900 mb-4">Contact Information</h3>
+        <div class="space-y-3">
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-gray-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            <span class="text-gray-600">sarah.johnson@lawfirm.com</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-gray-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+            <span class="text-gray-600">(555) 123-4567</span>
+          </div>
+          <div class="flex items-start">
+            <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-600">123 Corporate Plaza<br>New York, NY 10001</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office Hours -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-lg font-bold text-gray-900 mb-4">Office Hours</h3>
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span class="text-gray-600">Monday - Friday</span>
+            <span class="text-gray-900">9:00 AM - 6:00 PM</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Saturday</span>
+            <span class="text-gray-900">10:00 AM - 2:00 PM</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Sunday</span>
+            <span class="text-gray-900">Closed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeBookingModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Book Consultation</h3>
+          <button onclick="closeBookingModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+            <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Time</label>
+            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Consultation Type</label>
+            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option>In-person</option>
+              <option>Video call</option>
+              <option>Phone call</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Brief Description</label>
+            <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Briefly describe your legal matter..."></textarea>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button type="button" onclick="closeBookingModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button type="submit" class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Book Now
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Modal -->
+  <div id="reviewModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeReviewModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Write a Review</h3>
+          <button onclick="closeReviewModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Rating</label>
+            <div class="flex space-x-1">
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Your Review</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Share your experience..."></textarea>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button type="button" onclick="closeReviewModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button type="submit" class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Submit Review
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let activeModal = null;
+
+function openBookingModal() {
+  const modal = document.getElementById('bookingModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'booking';
+  
+  // Focus trap
+  const focusableElements = modal.querySelectorAll('button, input, select, textarea');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeBookingModal() {
+  const modal = document.getElementById('bookingModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function openReviewModal() {
+  const modal = document.getElementById('reviewModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'review';
+  
+  // Focus trap
+  const focusableElements = modal.querySelectorAll('button, input, select, textarea');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeReviewModal() {
+  const modal = document.getElementById('reviewModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+// ESC key listener
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    if (activeModal === 'booking') {
+      closeBookingModal();
+    } else if (activeModal === 'review') {
+      closeReviewModal();
+    }
+  }
+});
+
+// Initialize modals as hidden
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('bookingModal').setAttribute('aria-hidden', 'true');
+  document.getElementById('reviewModal').setAttribute('aria-hidden', 'true');
+});
+</script>
+
+
+<section id="booking" class="min-h-screen bg-gray-50 p-6">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Booking</h1>
+    <p class="text-gray-600">Schedule your consultation with ease.</p>
+  </div>
+
+  <!-- Booking Form -->
+  <div class="max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Main Booking Form -->
+      <div class="lg:col-span-2">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h2 class="text-xl font-bold text-gray-900 mb-6">Book Your Consultation</h2>
+          
+          <form class="space-y-6">
+            <!-- Lawyer Selection -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-3">Select Lawyer</label>
+              <div class="space-y-3">
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-500 cursor-pointer transition-colors duration-200">
+                  <div class="flex items-center">
+                    <input type="radio" name="lawyer" value="sarah" class="text-blue-600 focus:ring-blue-500">
+                    <div class="ml-4 flex items-center">
+                      <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/10" alt="Dr. Sarah Johnson">
+                      <div class="ml-3">
+                        <h3 class="font-semibold text-gray-900">Dr. Sarah Johnson</h3>
+                        <p class="text-sm text-gray-600">Corporate Law - 
+          <!-- Content will be injected here -->
+        50/consultation</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-500 cursor-pointer transition-colors duration-200">
+                  <div class="flex items-center">
+                    <input type="radio" name="lawyer" value="david" class="text-blue-600 focus:ring-blue-500">
+                    <div class="ml-4 flex items-center">
+                      <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/11" alt="Mr. David Chen">
+                      <div class="ml-3">
+                        <h3 class="font-semibold text-gray-900">Mr. David Chen</h3>
+                        <p class="text-sm text-gray-600">Family Law - 
+          <!-- Content will be injected here -->
+        20/consultation</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-500 cursor-pointer transition-colors duration-200">
+                  <div class="flex items-center">
+                    <input type="radio" name="lawyer" value="emily" class="text-blue-600 focus:ring-blue-500">
+                    <div class="ml-4 flex items-center">
+                      <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/12" alt="Ms. Emily Rodriguez">
+                      <div class="ml-3">
+                        <h3 class="font-semibold text-gray-900">Ms. Emily Rodriguez</h3>
+                        <p class="text-sm text-gray-600">Criminal Defense - $200/consultation</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Date and Time Selection -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+                <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Time</label>
+                <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option value="">Select time</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Consultation Type -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-3">Consultation Type</label>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <label class="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors duration-200">
+                  <input type="radio" name="consultation_type" value="in-person" class="text-blue-600 focus:ring-blue-500">
+                  <div class="ml-3">
+                    <div class="font-medium text-gray-900">In-Person</div>
+                    <div class="text-sm text-gray-600">Meet at office</div>
+                  </div>
+                </label>
+                
+                <label class="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors duration-200">
+                  <input type="radio" name="consultation_type" value="video" class="text-blue-600 focus:ring-blue-500">
+                  <div class="ml-3">
+                    <div class="font-medium text-gray-900">Video Call</div>
+                    <div class="text-sm text-gray-600">Online meeting</div>
+                  </div>
+                </label>
+                
+                <label class="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors duration-200">
+                  <input type="radio" name="consultation_type" value="phone" class="text-blue-600 focus:ring-blue-500">
+                  <div class="ml-3">
+                    <div class="font-medium text-gray-900">Phone Call</div>
+                    <div class="text-sm text-gray-600">Voice only</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your first name">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your last name">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your email">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your phone number">
+              </div>
+            </div>
+
+            <!-- Case Description -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Case Description</label>
+              <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Briefly describe your legal matter and what you need help with..."></textarea>
+            </div>
+
+            <!-- Additional Options -->
+            <div class="space-y-3">
+              <label class="flex items-center">
+                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-600">I agree to the terms and conditions</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-600">Send me email reminders about my appointment</span>
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-4">
+              <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                Book Consultation
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <!-- Booking Summary -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Booking Summary</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between">
+              <span class="text-gray-600">Lawyer:</span>
+              <span class="text-gray-900 font-medium">Not selected</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Date:</span>
+              <span class="text-gray-900 font-medium">Not selected</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Time:</span>
+              <span class="text-gray-900 font-medium">Not selected</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Type:</span>
+              <span class="text-gray-900 font-medium">Not selected</span>
+            </div>
+            <div class="border-t border-gray-200 pt-3">
+              <div class="flex justify-between">
+                <span class="text-gray-900 font-semibold">Total:</span>
+                <span class="text-gray-900 font-bold text-lg">$0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Available Time Slots -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Available Today</h3>
+          <div class="space-y-2">
+            <button class="w-full px-3 py-2 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors duration-200">
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium">2:00 PM</span>
+                <span class="text-xs text-green-600">Available</span>
+              </div>
+            </button>
+            <button class="w-full px-3 py-2 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors duration-200">
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium">3:00 PM</span>
+                <span class="text-xs text-green-600">Available</span>
+              </div>
+            </button>
+            <button class="w-full px-3 py-2 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors duration-200">
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium">4:00 PM</span>
+                <span class="text-xs text-green-600">Available</span>
+              </div>
+            </button>
+            <div class="w-full px-3 py-2 text-left border border-gray-200 rounded-lg bg-gray-50">
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium text-gray-400">5:00 PM</span>
+                <span class="text-xs text-red-600">Booked</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Help & Support -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Need Help?</h3>
+          <div class="space-y-3">
+            <button onclick="openHelpModal()" class="w-full px-4 py-2 text-left text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                </svg>
+                Booking FAQ
+              </div>
+            </button>
+            <button class="w-full px-4 py-2 text-left text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+                Contact Support
+              </div>
+            </button>
+            <button class="w-full px-4 py-2 text-left text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+                Call (555) 123-4567
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Help Modal -->
+  <div id="helpModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeHelpModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-2xl w-full max-h-96 overflow-y-auto p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Booking FAQ</h3>
+          <button onclick="closeHelpModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-2">How do I reschedule my appointment?</h4>
+            <p class="text-gray-600 text-sm">You can reschedule your appointment up to 24 hours before the scheduled time through your appointments page or by contacting our support team.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-2">What payment methods do you accept?</h4>
+            <p class="text-gray-600 text-sm">We accept all major credit cards, PayPal, and bank transfers. Payment is required at the time of booking.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-2">Can I get a refund if I cancel?</h4>
+            <p class="text-gray-600 text-sm">Full refunds are available for cancellations made at least 48 hours before your appointment. Cancellations within 24 hours are subject to a 50% fee.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-2">How long is a consultation?</h4>
+            <p class="text-gray-600 text-sm">Standard consultations are 60 minutes. Extended consultations of 90 or 120 minutes are available for complex cases.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-2">What should I prepare for my consultation?</h4>
+            <p class="text-gray-600 text-sm">Bring all relevant documents, a list of questions, and any previous legal correspondence related to your case.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let activeModal = null;
+
+function openHelpModal() {
+  const modal = document.getElementById('helpModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'help';
+  
+  // Focus trap
+  const focusableElements = modal.querySelectorAll('button');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeHelpModal() {
+  const modal = document.getElementById('helpModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+// ESC key listener
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && activeModal === 'help') {
+    closeHelpModal();
+  }
+});
+
+// Initialize modal as hidden
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('helpModal').setAttribute('aria-hidden', 'true');
+});
+
+// Update booking summary when form changes
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form');
+  const summaryElements = {
+    lawyer: document.querySelector('.space-y-3 .flex:nth-child(1) .font-medium'),
+    date: document.querySelector('.space-y-3 .flex:nth-child(2) .font-medium'),
+    time: document.querySelector('.space-y-3 .flex:nth-child(3) .font-medium'),
+    type: document.querySelector('.space-y-3 .flex:nth-child(4) .font-medium'),
+    total: document.querySelector('.text-lg.font-bold')
+  };
+
+  const prices = {
+    sarah: 150,
+    david: 120,
+    emily: 200
+  };
+
+  form.addEventListener('change', function(e) {
+    if (e.target.name === 'lawyer') {
+      const selectedLawyer = form.querySelector('input[name="lawyer"]:checked');
+      if (selectedLawyer) {
+        const lawyerCard = selectedLawyer.closest('.border');
+        const lawyerName = lawyerCard.querySelector('h3').textContent;
+        summaryElements.lawyer.textContent = lawyerName;
+        summaryElements.total.textContent = '
+      </main>
+
+      <!-- Core functionality scripts -->
+      <script>
+        // Initialize interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+          // Add interactive behaviors
+          const interactiveElements = document.querySelectorAll('.interactive-element');
+          interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+              element.classList.add('hover');
+            });
+            element.addEventListener('mouseleave', () => {
+              element.classList.remove('hover');
+            });
+          });
+
+          // Initialize any dynamic content
+          const dynamicContent = document.querySelectorAll('[data-dynamic]');
+          dynamicContent.forEach(content => {
+            // Add fade-in animation
+            content.classList.add('fade-in');
+          });
+        });
+
+        // Handle navigation
+        function handleNavigation(event) {
+          const link = event.currentTarget;
+          if (link.hasAttribute('data-nav')) {
+            event.preventDefault();
+            const target = link.getAttribute('data-nav');
+            document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+
+        // Initialize navigation
+        document.querySelectorAll('[data-nav]').forEach(link => {
+          link.addEventListener('click', handleNavigation);
+        });
+      </script>
+
+      <!-- Body Scripts -->
+      <script id="body-scripts">
+        // This script tag will be replaced with actual scripts.body content
+        if (window.scripts && window.scripts.body) {
+          document.getElementById('body-scripts').outerHTML = window.scripts.body;
+        }
+      </script>
+   
+      <script>
+        // Debug logging helper
+        const debugLog = (context, data) => {
+          console.log("[SPA Navigation] " + context + ":", data);
+        };
+
+        debugLog('Initializing', { projectType: 'webapp' });
+
+        // Function to show the selected section and hide others
+        function showSection(sectionId) {
+          debugLog('Showing section', { sectionId });
+          
+          // Find all sections that could be page content
+          const allSections = document.querySelectorAll('main section');
+          debugLog('Found sections', { 
+            count: allSections.length, 
+            ids: Array.from(allSections).map(s => s.id)
+          });
+          
+          // Hide all sections
+          allSections.forEach(section => {
+            section.style.display = 'none';
+          });
+          
+          // Show the requested section
+          const targetSection = document.getElementById(sectionId);
+          if (targetSection) {
+            debugLog('Target section found', { id: sectionId });
+            targetSection.style.display = 'block';
+          } else {
+            debugLog('Target section not found', { id: sectionId });
+            // If section not found and there are sections, show the first one
+            if (allSections.length > 0) {
+              const firstSection = allSections[0];
+              debugLog('Showing first section instead', { id: firstSection.id });
+              firstSection.style.display = 'block';
+            }
+          }
+          
+          // Update active states in any navigation
+          updateNavActiveStates(sectionId);
+        }
+        
+        // Function to update active states in navigation elements
+        function updateNavActiveStates(activeSectionId) {
+          debugLog('Updating nav states', { activeSectionId });
+          
+          // Find all navigation links
+          const navLinks = document.querySelectorAll('a[href^="#"]');
+          debugLog('Found nav links', { 
+            count: navLinks.length,
+            hrefs: Array.from(navLinks).map(link => link.getAttribute('href'))
+          });
+          
+          // Remove active classes from all links
+          navLinks.forEach(link => {
+            const linkSectionId = link.getAttribute('href').substring(1);
+            if (!linkSectionId) return;
+            
+            debugLog('Processing link', { 
+              href: link.getAttribute('href'),
+              currentClasses: link.className
+            });
+            
+            // Handle desktop and mobile navigation links
+            link.classList.remove('bg-gray-700', 'text-white', 'bg-blue-50', 'text-blue-600');
+            
+            if (link.closest('nav')) {
+              if (link.closest('.bg-gray-800') || link.closest('.text-gray-300')) {
+                link.classList.add('text-gray-300');
+              }
+            }
+          });
+          
+          // Add active classes to matching links
+          navLinks.forEach(link => {
+            const linkTarget = link.getAttribute('href').substring(1);
+            if (linkTarget === activeSectionId) {
+              debugLog('Activating link', { 
+                href: link.getAttribute('href'),
+                context: link.closest('.bg-gray-800') ? 'sidebar' : 
+                        link.closest('#mobile-menu') ? 'mobile' : 'default'
+              });
+              
+              if (link.closest('.bg-gray-800') || link.closest('nav')) {
+                link.classList.add('bg-gray-700', 'text-white');
+              } else if (link.closest('#mobile-menu')) {
+                link.classList.add('bg-gray-700', 'text-white');
+              } else {
+                link.classList.add('text-blue-600');
+              }
+            }
+          });
+        }
+        
+        // Handle hash changes
+        window.addEventListener('hashchange', function() {
+          const hash = window.location.hash.substring(1);
+          debugLog('Hash changed', { hash });
+          if (hash) {
+            showSection(hash);
+          }
+        });
+        
+        // Handle initial page load
+        function handleInitialLoad() {
+          debugLog('Handling initial load');
+          
+          const hash = window.location.hash.substring(1);
+          debugLog('Initial hash', { hash });
+          
+          if (hash) {
+            showSection(hash);
+          } else {
+            const sections = document.querySelectorAll('main section');
+            debugLog('No hash found, searching for default section', { 
+              totalSections: sections.length 
+            });
+            
+            if (sections.length > 0) {
+              const dashboardSection = document.getElementById('dashboard');
+              if (dashboardSection) {
+                debugLog('Found dashboard section', { id: 'dashboard' });
+                showSection('dashboard');
+                if (history.replaceState) {
+                  history.replaceState(null, null, '#dashboard');
+                } else {
+                  window.location.hash = 'dashboard';
+                }
+              } else {
+                const firstSectionId = sections[0].id;
+                if (firstSectionId) {
+                  debugLog('Using first section', { id: firstSectionId });
+                  showSection(firstSectionId);
+                  if (history.replaceState) {
+                    history.replaceState(null, null, '#' + firstSectionId);
+                  } else {
+                    window.location.hash = firstSectionId;
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+        // Set up delegation for navigation clicks
+        document.addEventListener('click', function(event) {
+          let targetElement = event.target.closest('a');
+          
+          if (targetElement && targetElement.getAttribute('href') && targetElement.getAttribute('href').startsWith('#')) {
+            const sectionId = targetElement.getAttribute('href').substring(1);
+            debugLog('Navigation click', { 
+              href: targetElement.getAttribute('href'),
+              sectionId 
+            });
+            
+            if (sectionId) {
+              const targetSection = document.getElementById(sectionId);
+              if (targetSection) {
+                event.preventDefault();
+                window.location.hash = sectionId;
+                showSection(sectionId);
+              } else {
+                debugLog('Target section not found for click', { sectionId });
+              }
+            }
+          }
+        });
+        
+        // Initial setup
+        debugLog('Starting initial setup');
+        const allSections = document.querySelectorAll('main section');
+        debugLog('Initial sections state', {
+          totalSections: allSections.length,
+          sectionIds: Array.from(allSections).map(s => s.id)
+        });
+        
+        allSections.forEach((section, index) => {
+          section.style.display = index === 0 ? 'block' : 'none';
+          debugLog('Setting initial section visibility', {
+            id: section.id,
+            index,
+            display: index === 0 ? 'block' : 'none'
+          });
+        });
+        
+        handleInitialLoad();
+      </script>
+</body>
+</html> + prices[selectedLawyer.value];
+      }
+    }
+    
+    if (e.target.type === 'date') {
+      summaryElements.date.textContent = e.target.value || 'Not selected';
+    }
+    
+    if (e.target.tagName === 'SELECT') {
+      const selectedOption = e.target.options[e.target.selectedIndex];
+      summaryElements.time.textContent = selectedOption.text || 'Not selected';
+    }
+    
+    if (e.target.name === 'consultation_type') {
+      const typeCard = e.target.closest('label');
+      const typeName = typeCard.querySelector('.font-medium').textContent;
+      summaryElements.type.textContent = typeName;
+    }
+  });
+});
+</script>
+
+
+<section id="appointments" class="min-h-screen bg-gray-50 p-6">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Appointments</h1>
+    <p class="text-gray-600">Manage your scheduled consultations and meetings.</p>
+  </div>
+
+  <!-- Filter Tabs -->
+  <div class="mb-6">
+    <div class="border-b border-gray-200">
+      <nav class="-mb-px flex space-x-8">
+        <button class="py-2 px-1 border-b-2 border-blue-500 font-medium text-sm text-blue-600">
+          All Appointments
+        </button>
+        <button class="py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+          Upcoming
+        </button>
+        <button class="py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+          Completed
+        </button>
+        <button class="py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+          Cancelled
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Appointments List -->
+  <div class="space-y-6">
+    <!-- Upcoming Appointment -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-200">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex items-start space-x-4">
+          <img class="w-16 h-16 rounded-full" src="https://avatar.iran.liara.run/public/13" alt="Dr. Sarah Johnson">
+          <div class="flex-1">
+            <div class="flex items-center space-x-2 mb-1">
+              <h3 class="text-lg font-semibold text-gray-900">Dr. Sarah Johnson</h3>
+              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Confirmed</span>
+            </div>
+            <p class="text-blue-600 font-medium mb-2">Corporate Law Consultation</p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                </svg>
+                Today, Dec 15, 2023
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+                2:00 PM - 3:00 PM
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                </svg>
+                Video Call
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 lg:mt-0 flex flex-col sm:flex-row gap-2">
+          <button onclick="openRescheduleModal()" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+            Reschedule
+          </button>
+          <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+            Join Meeting
+          </button>
+          <button onclick="openCancelModal()" class="px-4 py-2 border border-red-300 text-red-600 rounded-lg hover:bg-red-50 transition-colors duration-200">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pending Appointment -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-200">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex items-start space-x-4">
+          <img class="w-16 h-16 rounded-full" src="https://avatar.iran.liara.run/public/14" alt="Mr. David Chen">
+          <div class="flex-1">
+            <div class="flex items-center space-x-2 mb-1">
+              <h3 class="text-lg font-semibold text-gray-900">Mr. David Chen</h3>
+              <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">Pending</span>
+            </div>
+            <p class="text-blue-600 font-medium mb-2">Family Law Consultation</p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                </svg>
+                Tomorrow, Dec 16, 2023
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+                10:00 AM - 11:00 AM
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                In-Person
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 lg:mt-0 flex flex-col sm:flex-row gap-2">
+          <button onclick="openRescheduleModal()" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+            Reschedule
+          </button>
+          <button onclick="openCancelModal()" class="px-4 py-2 border border-red-300 text-red-600 rounded-lg hover:bg-red-50 transition-colors duration-200">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completed Appointment -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-200">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex items-start space-x-4">
+          <img class="w-16 h-16 rounded-full" src="https://avatar.iran.liara.run/public/15" alt="Ms. Emily Rodriguez">
+          <div class="flex-1">
+            <div class="flex items-center space-x-2 mb-1">
+              <h3 class="text-lg font-semibold text-gray-900">Ms. Emily Rodriguez</h3>
+              <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Completed</span>
+            </div>
+            <p class="text-blue-600 font-medium mb-2">Criminal Defense Consultation</p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                </svg>
+                Dec 10, 2023
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+                3:30 PM - 4:30 PM
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+                Phone Call
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 lg:mt-0 flex flex-col sm:flex-row gap-2">
+          <button onclick="openReviewModal()" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+            Write Review
+          </button>
+          <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+            Book Again
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cancelled Appointment -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 opacity-75">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex items-start space-x-4">
+          <img class="w-16 h-16 rounded-full grayscale" src="https://avatar.iran.liara.run/public/16" alt="Dr. Michael Thompson">
+          <div class="flex-1">
+            <div class="flex items-center space-x-2 mb-1">
+              <h3 class="text-lg font-semibold text-gray-900">Dr. Michael Thompson</h3>
+              <span class="px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Cancelled</span>
+            </div>
+            <p class="text-gray-600 font-medium mb-2">Real Estate Law Consultation</p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                </svg>
+                Dec 8, 2023
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+                1:00 PM - 2:00 PM
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                In-Person
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 lg:mt-0">
+          <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+            Book Again
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State (hidden by default) -->
+  <div class="hidden text-center py-12">
+    <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8a4 4 0 11-8 0v-4m4-4h8m-4-4v8"></path>
+    </svg>
+    <h3 class="mt-2 text-sm font-medium text-gray-900">No appointments</h3>
+    <p class="mt-1 text-sm text-gray-500">Get started by booking your first consultation.</p>
+    <div class="mt-6">
+      <button class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+        Book Consultation
+      </button>
+    </div>
+  </div>
+
+  <!-- Reschedule Modal -->
+  <div id="rescheduleModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeRescheduleModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Reschedule Appointment</h3>
+          <button onclick="closeRescheduleModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">New Date</label>
+            <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">New Time</label>
+            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Reason for Rescheduling</label>
+            <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Optional..."></textarea>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button type="button" onclick="closeRescheduleModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button type="submit" class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Reschedule
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cancel Modal -->
+  <div id="cancelModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeCancelModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Cancel Appointment</h3>
+          <button onclick="closeCancelModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="mb-4">
+          <p class="text-gray-600">Are you sure you want to cancel this appointment? This action cannot be undone.</p>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Reason for Cancellation</label>
+            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option>Schedule conflict</option>
+              <option>Personal emergency</option>
+              <option>No longer needed</option>
+              <option>Found another lawyer</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Additional Comments</label>
+            <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Optional..."></textarea>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button type="button" onclick="closeCancelModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Keep Appointment
+            </button>
+            <button type="submit" class="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200">
+              Cancel Appointment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Modal -->
+  <div id="reviewModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeReviewModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Write a Review</h3>
+          <button onclick="closeReviewModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Rating</label>
+            <div class="flex space-x-1">
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+              <button type="button" class="text-gray-300 hover:text-yellow-400 focus:text-yellow-400">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Your Review</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Share your experience..."></textarea>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button type="button" onclick="closeReviewModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button type="submit" class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Submit Review
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let activeModal = null;
+
+function openRescheduleModal() {
+  const modal = document.getElementById('rescheduleModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'reschedule';
+  
+  const focusableElements = modal.querySelectorAll('button, input, select, textarea');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeRescheduleModal() {
+  const modal = document.getElementById('rescheduleModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function openCancelModal() {
+  const modal = document.getElementById('cancelModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'cancel';
+  
+  const focusableElements = modal.querySelectorAll('button, input, select, textarea');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeCancelModal() {
+  const modal = document.getElementById('cancelModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function openReviewModal() {
+  const modal = document.getElementById('reviewModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'review';
+  
+  const focusableElements = modal.querySelectorAll('button, input, select, textarea');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeReviewModal() {
+  const modal = document.getElementById('reviewModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+// ESC key listener
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    if (activeModal === 'reschedule') {
+      closeRescheduleModal();
+    } else if (activeModal === 'cancel') {
+      closeCancelModal();
+    } else if (activeModal === 'review') {
+      closeReviewModal();
+    }
+  }
+});
+
+// Initialize modals as hidden
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('rescheduleModal').setAttribute('aria-hidden', 'true');
+  document.getElementById('cancelModal').setAttribute('aria-hidden', 'true');
+  document.getElementById('reviewModal').setAttribute('aria-hidden', 'true');
+});
+</script>
+
+
+<section id="messages" class="min-h-screen bg-gray-50 p-6">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Messages</h1>
+    <p class="text-gray-600">Communicate with your lawyers securely.</p>
+  </div>
+
+  <!-- Messages Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[calc(100vh-200px)]">
+    <!-- Conversations List -->
+    <div class="lg:col-span-1">
+      <div class="bg-white rounded-lg border border-gray-200 h-full flex flex-col">
+        <!-- Search Bar -->
+        <div class="p-4 border-b border-gray-200">
+          <div class="relative">
+            <input type="text" placeholder="Search conversations..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <svg class="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Conversations -->
+        <div class="flex-1 overflow-y-auto">
+          <!-- Active Conversation -->
+          <div class="p-4 border-b border-gray-200 bg-blue-50 cursor-pointer hover:bg-blue-100 transition-colors duration-200">
+            <div class="flex items-start space-x-3">
+              <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/17" alt="Dr. Sarah Johnson">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 truncate">Dr. Sarah Johnson</h3>
+                  <span class="text-xs text-gray-500">2:30 PM</span>
+                </div>
+                <p class="text-sm text-gray-600 truncate">Thank you for providing the documents. I'll review them and get back to you...</p>
+                <div class="flex items-center justify-between mt-1">
+                  <span class="text-xs text-blue-600">Corporate Law</span>
+                  <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Conversations -->
+          <div class="p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors duration-200">
+            <div class="flex items-start space-x-3">
+              <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/18" alt="Mr. David Chen">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 truncate">Mr. David Chen</h3>
+                  <span class="text-xs text-gray-500">Yesterday</span>
+                </div>
+                <p class="text-sm text-gray-600 truncate">The custody hearing is scheduled for next week. Please prepare the required...</p>
+                <div class="flex items-center justify-between mt-1">
+                  <span class="text-xs text-green-600">Family Law</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors duration-200">
+            <div class="flex items-start space-x-3">
+              <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/19" alt="Ms. Emily Rodriguez">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 truncate">Ms. Emily Rodriguez</h3>
+                  <span class="text-xs text-gray-500">Dec 10</span>
+                </div>
+                <p class="text-sm text-gray-600 truncate">Your case has been resolved successfully. Here's the final summary...</p>
+                <div class="flex items-center justify-between mt-1">
+                  <span class="text-xs text-red-600">Criminal Defense</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors duration-200">
+            <div class="flex items-start space-x-3">
+              <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/20" alt="Dr. Michael Thompson">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 truncate">Dr. Michael Thompson</h3>
+                  <span class="text-xs text-gray-500">Dec 8</span>
+                </div>
+                <p class="text-sm text-gray-600 truncate">The property transfer documents are ready for your signature...</p>
+                <div class="flex items-center justify-between mt-1">
+                  <span class="text-xs text-purple-600">Real Estate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="lg:col-span-2">
+      <div class="bg-white rounded-lg border border-gray-200 h-full flex flex-col">
+        <!-- Chat Header -->
+        <div class="p-4 border-b border-gray-200 flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <img class="w-10 h-10 rounded-full" src="https://avatar.iran.liara.run/public/17" alt="Dr. Sarah Johnson">
+            <div>
+              <h3 class="font-semibold text-gray-900">Dr. Sarah Johnson</h3>
+              <p class="text-sm text-gray-600">Corporate Law Specialist</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button onclick="openVideoCallModal()" class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+              </svg>
+            </button>
+            <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+              </svg>
+            </button>
+            <button onclick="openAttachmentModal()" class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="flex-1 overflow-y-auto p-4 space-y-4">
+          <!-- Received Message -->
+          <div class="flex items-start space-x-3">
+            <img class="w-8 h-8 rounded-full" src="https://avatar.iran.liara.run/public/17" alt="Dr. Sarah Johnson">
+            <div class="flex-1">
+              <div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+                <p class="text-sm text-gray-900">Hello! I've received your consultation request. Could you please provide more details about your corporate structure?</p>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">10:30 AM</p>
+            </div>
+          </div>
+
+          <!-- Sent Message -->
+          <div class="flex items-start space-x-3 justify-end">
+            <div class="flex-1 flex justify-end">
+              <div class="bg-blue-600 rounded-lg p-3 max-w-xs">
+                <p class="text-sm text-white">Thank you for getting back to me. We're a tech startup looking to incorporate in Delaware. We have 3 co-founders and are planning to raise Series A funding.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <p class="text-xs text-gray-500">10:45 AM</p>
+          </div>
+
+          <!-- Received Message with Attachment -->
+          <div class="flex items-start space-x-3">
+            <img class="w-8 h-8 rounded-full" src="https://avatar.iran.liara.run/public/17" alt="Dr. Sarah Johnson">
+            <div class="flex-1">
+              <div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+                <p class="text-sm text-gray-900">Perfect! I'll need you to fill out this incorporation questionnaire. Please review and return it by tomorrow.</p>
+                <div class="mt-2 p-2 bg-white rounded border border-gray-200 flex items-center space-x-2">
+                  <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-xs text-gray-600">incorporation-questionnaire.pdf</span>
+                </div>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">11:15 AM</p>
+            </div>
+          </div>
+
+          <!-- Sent Message -->
+          <div class="flex items-start space-x-3 justify-end">
+            <div class="flex-1 flex justify-end">
+              <div class="bg-blue-600 rounded-lg p-3 max-w-xs">
+                <p class="text-sm text-white">Received! I'll complete it today and send it back. Also, when would be a good time for our next consultation?</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <p class="text-xs text-gray-500">2:15 PM</p>
+          </div>
+
+          <!-- Latest Received Message -->
+          <div class="flex items-start space-x-3">
+            <img class="w-8 h-8 rounded-full" src="https://avatar.iran.liara.run/public/17" alt="Dr. Sarah Johnson">
+            <div class="flex-1">
+              <div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+                <p class="text-sm text-gray-900">Thank you for providing the documents. I'll review them and get back to you with next steps. How about Thursday at 3 PM for our follow-up?</p>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">2:30 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message Input -->
+        <div class="p-4 border-t border-gray-200">
+          <div class="flex items-end space-x-3">
+            <div class="flex-1">
+              <textarea rows="1" placeholder="Type your message..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"></textarea>
+            </div>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Call Modal -->
+  <div id="videoCallModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeVideoCallModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Start Video Call</h3>
+          <button onclick="closeVideoCallModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="text-center">
+          <div class="mb-4">
+            <img class="w-16 h-16 rounded-full mx-auto mb-3" src="https://avatar.iran.liara.run/public/17" alt="Dr. Sarah Johnson">
+            <h4 class="font-semibold text-gray-900">Dr. Sarah Johnson</h4>
+            <p class="text-sm text-gray-600">Corporate Law Specialist</p>
+          </div>
+          <p class="text-gray-600 mb-6">Would you like to start a video call with Dr. Johnson?</p>
+          <div class="flex space-x-3">
+            <button onclick="closeVideoCallModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button class="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200">
+              Start Call
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Attachment Modal -->
+  <div id="attachmentModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeAttachmentModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Send Attachment</h3>
+          <button onclick="closeAttachmentModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <div class="mt-4">
+              <label class="cursor-pointer">
+                <span class="mt-2 block text-sm font-medium text-gray-900">Upload a file</span>
+                <input type="file" class="sr-only">
+              </label>
+              <p class="mt-2 text-xs text-gray-500">PNG, JPG, PDF up to 10MB</p>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Message (optional)</label>
+            <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Add a message with your attachment..."></textarea>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button onclick="closeAttachmentModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let activeModal = null;
+
+function openVideoCallModal() {
+  const modal = document.getElementById('videoCallModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'videoCall';
+  
+  const focusableElements = modal.querySelectorAll('button');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeVideoCallModal() {
+  const modal = document.getElementById('videoCallModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function openAttachmentModal() {
+  const modal = document.getElementById('attachmentModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'attachment';
+  
+  const focusableElements = modal.querySelectorAll('button, input, textarea');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeAttachmentModal() {
+  const modal = document.getElementById('attachmentModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+// ESC key listener
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    if (activeModal === 'videoCall') {
+      closeVideoCallModal();
+    } else if (activeModal === 'attachment') {
+      closeAttachmentModal();
+    }
+  }
+});
+
+// Initialize modals as hidden
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('videoCallModal').setAttribute('aria-hidden', 'true');
+  document.getElementById('attachmentModal').setAttribute('aria-hidden', 'true');
+  
+  // Auto-resize textarea
+  const textarea = document.querySelector('textarea[placeholder="Type your message..."]');
+  textarea.addEventListener('input', function() {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px';
+  });
+});
+</script>
+
+
+<section id="user-profile" class="min-h-screen bg-gray-50 p-6">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">User Profile</h1>
+    <p class="text-gray-600">Manage your account settings and preferences.</p>
+  </div>
+
+  <!-- Profile Content -->
+  <div class="max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Profile Overview -->
+      <div class="lg:col-span-1">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <div class="text-center">
+            <div class="relative inline-block">
+              <img class="w-24 h-24 rounded-full mx-auto" src="https://avatar.iran.liara.run/public/21" alt="User Avatar">
+              <button onclick="openAvatarModal()" class="absolute bottom-0 right-0 bg-blue-600 text-white rounded-full p-2 hover:bg-blue-700 transition-colors duration-200">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
+                </svg>
+              </button>
+            </div>
+            <h2 class="text-xl font-bold text-gray-900 mt-4">John Doe</h2>
+            <p class="text-gray-600">john.doe@example.com</p>
+            <p class="text-sm text-gray-500 mt-2">Member since Dec 2023</p>
+          </div>
+          
+          <div class="mt-6 space-y-3">
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <span class="text-sm font-medium text-gray-700">Profile Completion</span>
+              <span class="text-sm font-bold text-blue-600">85%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-2">
+            <button class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Edit Profile
+            </button>
+            <button onclick="openSecurityModal()" class="w-full px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Security Settings
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Profile Settings -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- Personal Information -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Personal Information</h3>
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                <input type="text" value="John" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                <input type="text" value="Doe" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" value="john.doe@example.com" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" value="+1 (555) 123-4567" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
+                <input type="date" value="1990-01-15" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+              <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your full address">123 Main Street, Apt 4B
+New York, NY 10001</textarea>
+            </div>
+            
+            <div class="flex justify-end">
+              <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                Save Changes
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Preferences -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Preferences</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Communication Method</label>
+              <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option>Email</option>
+                <option>Phone</option>
+                <option>SMS</option>
+                <option>In-app notifications</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Time Zone</label>
+              <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option>Eastern Time (ET)</option>
+                <option>Central Time (CT)</option>
+                <option>Mountain Time (MT)</option>
+                <option>Pacific Time (PT)</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-3">Legal Areas of Interest</label>
+              <div class="grid grid-cols-2 gap-2">
+                <label class="flex items-center">
+                  <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-sm text-gray-600">Corporate Law</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-sm text-gray-600">Family Law</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-sm text-gray-600">Criminal Defense</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-sm text-gray-600">Real Estate</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-sm text-gray-600">Immigration</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-sm text-gray-600">Personal Injury</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notification Settings -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Notification Settings</h3>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="text-sm font-medium text-gray-900">Email Notifications</h4>
+                <p class="text-sm text-gray-500">Receive updates about appointments and messages</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="text-sm font-medium text-gray-900">SMS Notifications</h4>
+                <p class="text-sm text-gray-500">Get text reminders for upcoming appointments</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="text-sm font-medium text-gray-900">Push Notifications</h4>
+                <p class="text-sm text-gray-500">Receive in-app notifications</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="text-sm font-medium text-gray-900">Marketing Communications</h4>
+                <p class="text-sm text-gray-500">Receive updates about new features and promotions</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Account Actions -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Account Actions</h3>
+          <div class="space-y-3">
+            <button onclick="openExportModal()" class="w-full px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-left">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                Export My Data
+              </div>
+            </button>
+            
+            <button onclick="openDeactivateModal()" class="w-full px-4 py-2 border border-red-300 text-red-600 rounded-lg hover:bg-red-50 transition-colors duration-200 text-left">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" clip-rule="evenodd"></path>
+                  <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 2a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                </svg>
+                Deactivate Account
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Avatar Upload Modal -->
+  <div id="avatarModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeAvatarModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Update Profile Picture</h3>
+          <button onclick="closeAvatarModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="text-center">
+          <div class="mb-4">
+            <img class="w-24 h-24 rounded-full mx-auto" src="https://avatar.iran.liara.run/public/21" alt="Current Avatar">
+          </div>
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6">
+            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <div class="mt-4">
+              <label class="cursor-pointer">
+                <span class="mt-2 block text-sm font-medium text-gray-900">Upload new picture</span>
+                <input type="file" accept="image/*" class="sr-only">
+              </label>
+              <p class="mt-2 text-xs text-gray-500">PNG, JPG up to 5MB</p>
+            </div>
+          </div>
+          <div class="flex space-x-3 mt-6">
+            <button onclick="closeAvatarModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Upload
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security Settings Modal -->
+  <div id="securityModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeSecurityModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Security Settings</h3>
+          <button onclick="closeSecurityModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Current Password</label>
+            <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">New Password</label>
+            <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Confirm New Password</label>
+            <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+            <span class="ml-2 text-sm text-gray-600">Enable two-factor authentication</span>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button onclick="closeSecurityModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Update Password
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Export Data Modal -->
+  <div id="exportModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeExportModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Export Your Data</h3>
+          <button onclick="closeExportModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <p class="text-gray-600">Select the data you want to export:</p>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">Profile Information</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">Appointment History</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">Messages</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+              <span class="ml-2 text-sm text-gray-600">Payment History</span>
+            </label>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Export Format</label>
+            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option>JSON</option>
+              <option>CSV</option>
+              <option>PDF</option>
+            </select>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button onclick="closeExportModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Export Data
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deactivate Account Modal -->
+  <div id="deactivateModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeDeactivateModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Deactivate Account</h3>
+          <button onclick="closeDeactivateModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+            <div class="flex">
+              <svg class="w-5 h-5 text-red-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+              </svg>
+              <div>
+                <h4 class="text-sm font-medium text-red-800">Warning</h4>
+                <p class="text-sm text-red-700 mt-1">This action cannot be undone. Your account and all associated data will be permanently deleted.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Reason for Deactivation</label>
+            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option>No longer need legal services</option>
+              <option>Found another platform</option>
+              <option>Privacy concerns</option>
+              <option>Technical issues</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Additional Comments</label>
+            <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Optional feedback..."></textarea>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button onclick="closeDeactivateModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button class="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200">
+              Deactivate Account
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let activeModal = null;
+
+function openAvatarModal() {
+  const modal = document.getElementById('avatarModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'avatar';
+  
+  const focusableElements = modal.querySelectorAll('button, input');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeAvatarModal() {
+  const modal = document.getElementById('avatarModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function openSecurityModal() {
+  const modal = document.getElementById('securityModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'security';
+  
+  const focusableElements = modal.querySelectorAll('button, input');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeSecurityModal() {
+  const modal = document.getElementById('securityModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function openExportModal() {
+  const modal = document.getElementById('exportModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'export';
+  
+  const focusableElements = modal.querySelectorAll('button, input, select');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeExportModal() {
+  const modal = document.getElementById('exportModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function openDeactivateModal() {
+  const modal = document.getElementById('deactivateModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'deactivate';
+  
+  const focusableElements = modal.querySelectorAll('button, input, select, textarea');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeDeactivateModal() {
+  const modal = document.getElementById('deactivateModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+// ESC key listener
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    if (activeModal === 'avatar') {
+      closeAvatarModal();
+    } else if (activeModal === 'security') {
+      closeSecurityModal();
+    } else if (activeModal === 'export') {
+      closeExportModal();
+    } else if (activeModal === 'deactivate') {
+      closeDeactivateModal();
+    }
+  }
+});
+
+// Initialize modals as hidden
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('avatarModal').setAttribute('aria-hidden', 'true');
+  document.getElementById('securityModal').setAttribute('aria-hidden', 'true');
+  document.getElementById('exportModal').setAttribute('aria-hidden', 'true');
+  document.getElementById('deactivateModal').setAttribute('aria-hidden', 'true');
+});
+</script>
+
+
+<section id="notifications" class="min-h-screen bg-gray-50 p-6">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Notifications</h1>
+    <p class="text-gray-600">Stay updated with your legal consultations and appointments.</p>
+  </div>
+
+  <!-- Notification Controls -->
+  <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div class="flex items-center space-x-4">
+      <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+        All
+      </button>
+      <button class="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+        Unread
+      </button>
+      <button class="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+        Appointments
+      </button>
+      <button class="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+        Messages
+      </button>
+    </div>
+    <div class="flex items-center space-x-2">
+      <button onclick="openSettingsModal()" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+        Settings
+      </button>
+      <button class="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+        Mark All Read
+      </button>
+    </div>
+  </div>
+
+  <!-- Notifications List -->
+  <div class="space-y-4">
+    <!-- New Appointment Notification -->
+    <div class="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200">
+      <div class="flex items-start space-x-4">
+        <div class="flex-shrink-0">
+          <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/22" alt="Dr. Sarah Johnson">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <h3 class="text-sm font-semibold text-gray-900">Appointment Confirmed</h3>
+              <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+            </div>
+            <span class="text-xs text-gray-500">5 min ago</span>
+          </div>
+          <p class="text-sm text-gray-600 mt-1">
+            Your consultation with Dr. Sarah Johnson has been confirmed for today at 2:00 PM.
+          </p>
+          <div class="flex items-center space-x-3 mt-3">
+            <button class="text-xs text-blue-600 hover:text-blue-700 font-medium">View Details</button>
+            <button class="text-xs text-gray-500 hover:text-gray-700">Dismiss</button>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Message Notification -->
+    <div class="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200">
+      <div class="flex items-start space-x-4">
+        <div class="flex-shrink-0">
+          <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/23" alt="Mr. David Chen">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <h3 class="text-sm font-semibold text-gray-900">New Message</h3>
+              <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+            </div>
+            <span class="text-xs text-gray-500">15 min ago</span>
+          </div>
+          <p class="text-sm text-gray-600 mt-1">
+            Mr. David Chen sent you a message regarding your family law consultation.
+          </p>
+          <div class="flex items-center space-x-3 mt-3">
+            <button class="text-xs text-blue-600 hover:text-blue-700 font-medium">Read Message</button>
+            <button class="text-xs text-gray-500 hover:text-gray-700">Dismiss</button>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Confirmation -->
+    <div class="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200">
+      <div class="flex items-start space-x-4">
+        <div class="flex-shrink-0">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-semibold text-gray-900">Payment Processed</h3>
+            <span class="text-xs text-gray-500">1 hour ago</span>
+          </div>
+          <p class="text-sm text-gray-600 mt-1">
+            Your payment of 
+          <!-- Content will be injected here -->
+        50 for the consultation with Dr. Sarah Johnson has been processed successfully.
+          </p>
+          <div class="flex items-center space-x-3 mt-3">
+            <button class="text-xs text-blue-600 hover:text-blue-700 font-medium">View Receipt</button>
+            <button class="text-xs text-gray-500 hover:text-gray-700">Dismiss</button>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appointment Reminder -->
+    <div class="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200 opacity-75">
+      <div class="flex items-start space-x-4">
+        <div class="flex-shrink-0">
+          <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/24" alt="Ms. Emily Rodriguez">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-semibold text-gray-900">Appointment Reminder</h3>
+            <span class="text-xs text-gray-500">2 hours ago</span>
+          </div>
+          <p class="text-sm text-gray-600 mt-1">
+            Don't forget your appointment with Ms. Emily Rodriguez tomorrow at 3:30 PM.
+          </p>
+          <div class="flex items-center space-x-3 mt-3">
+            <button class="text-xs text-blue-600 hover:text-blue-700 font-medium">Add to Calendar</button>
+            <button class="text-xs text-gray-500 hover:text-gray-700">Dismiss</button>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Document Request -->
+    <div class="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200 opacity-75">
+      <div class="flex items-start space-x-4">
+        <div class="flex-shrink-0">
+          <img class="w-12 h-12 rounded-full" src="https://avatar.iran.liara.run/public/25" alt="Dr. Michael Thompson">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-semibold text-gray-900">Document Request</h3>
+            <span class="text-xs text-gray-500">1 day ago</span>
+          </div>
+          <p class="text-sm text-gray-600 mt-1">
+            Dr. Michael Thompson has requested additional documents for your real estate case.
+          </p>
+          <div class="flex items-center space-x-3 mt-3">
+            <button onclick="openDocumentModal()" class="text-xs text-blue-600 hover:text-blue-700 font-medium">Upload Documents</button>
+            <button class="text-xs text-gray-500 hover:text-gray-700">Dismiss</button>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- System Update -->
+    <div class="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200 opacity-75">
+      <div class="flex items-start space-x-4">
+        <div class="flex-shrink-0">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-semibold text-gray-900">System Update</h3>
+            <span class="text-xs text-gray-500">2 days ago</span>
+          </div>
+          <p class="text-sm text-gray-600 mt-1">
+            We've updated our platform with new features and security improvements.
+          </p>
+          <div class="flex items-center space-x-3 mt-3">
+            <button class="text-xs text-blue-600 hover:text-blue-700 font-medium">Learn More</button>
+            <button class="text-xs text-gray-500 hover:text-gray-700">Dismiss</button>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State (hidden by default) -->
+  <div class="hidden text-center py-12">
+    <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM9 7H4l5-5v5zm6 10V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2h6a2 2 0 002-2z"></path>
+    </svg>
+    <h3 class="mt-2 text-sm font-medium text-gray-900">No notifications</h3>
+    <p class="mt-1 text-sm text-gray-500">You're all caught up! Check back later for updates.</p>
+  </div>
+
+  <!-- Notification Settings Modal -->
+  <div id="settingsModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeSettingsModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Notification Settings</h3>
+          <button onclick="closeSettingsModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-medium text-gray-900">Appointment Reminders</h4>
+              <p class="text-sm text-gray-500">Get notified about upcoming appointments</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" checked class="sr-only peer">
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+            </label>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-medium text-gray-900">New Messages</h4>
+              <p class="text-sm text-gray-500">Get notified when lawyers send messages</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" checked class="sr-only peer">
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+            </label>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-medium text-gray-900">Payment Updates</h4>
+              <p class="text-sm text-gray-500">Get notified about payment confirmations</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" checked class="sr-only peer">
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+            </label>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-medium text-gray-900">Document Requests</h4>
+              <p class="text-sm text-gray-500">Get notified when documents are requested</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" class="sr-only peer">
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+            </label>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-medium text-gray-900">Marketing Updates</h4>
+              <p class="text-sm text-gray-500">Get notified about new features and promotions</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" class="sr-only peer">
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+            </label>
+          </div>
+        </div>
+        <div class="flex space-x-3 pt-6">
+          <button onclick="closeSettingsModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+            Cancel
+          </button>
+          <button class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+            Save Settings
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document Upload Modal -->
+  <div id="documentModal" class="fixed inset-0 z-50 hidden" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onclick="closeDocumentModal()"></div>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-gray-900">Upload Documents</h3>
+          <button onclick="closeDocumentModal()" class="text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <p class="text-gray-600">Dr. Michael Thompson has requested the following documents for your real estate case:</p>
+          <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+            <li>Property deed</li>
+            <li>Purchase agreement</li>
+            <li>Title insurance policy</li>
+          </ul>
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <div class="mt-4">
+              <label class="cursor-pointer">
+                <span class="mt-2 block text-sm font-medium text-gray-900">Upload documents</span>
+                <input type="file" multiple class="sr-only">
+              </label>
+              <p class="mt-2 text-xs text-gray-500">PDF, DOC, JPG up to 10MB each</p>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Message (optional)</label>
+            <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Add a note with your documents..."></textarea>
+          </div>
+          <div class="flex space-x-3 pt-4">
+            <button onclick="closeDocumentModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              Cancel
+            </button>
+            <button class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Upload Documents
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let activeModal = null;
+
+function openSettingsModal() {
+  const modal = document.getElementById('settingsModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'settings';
+  
+  const focusableElements = modal.querySelectorAll('button, input');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeSettingsModal() {
+  const modal = document.getElementById('settingsModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+function openDocumentModal() {
+  const modal = document.getElementById('documentModal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  activeModal = 'document';
+  
+  const focusableElements = modal.querySelectorAll('button, input, textarea');
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+function closeDocumentModal() {
+  const modal = document.getElementById('documentModal');
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  activeModal = null;
+}
+
+// ESC key listener
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    if (activeModal === 'settings') {
+      closeSettingsModal();
+    } else if (activeModal === 'document') {
+      closeDocumentModal();
+    }
+  }
+});
+
+// Initialize modals as hidden
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('settingsModal').setAttribute('aria-hidden', 'true');
+  document.getElementById('documentModal').setAttribute('aria-hidden', 'true');
+});
+</script>
+</div></mountpoint>
+      </main>
+
+      <!-- Core functionality scripts -->
+      <script>
+        // Initialize interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+          // Add interactive behaviors
+          const interactiveElements = document.querySelectorAll('.interactive-element');
+          interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+              element.classList.add('hover');
+            });
+            element.addEventListener('mouseleave', () => {
+              element.classList.remove('hover');
+            });
+          });
+
+          // Initialize any dynamic content
+          const dynamicContent = document.querySelectorAll('[data-dynamic]');
+          dynamicContent.forEach(content => {
+            // Add fade-in animation
+            content.classList.add('fade-in');
+          });
+        });
+
+        // Handle navigation
+        function handleNavigation(event) {
+          const link = event.currentTarget;
+          if (link.hasAttribute('data-nav')) {
+            event.preventDefault();
+            const target = link.getAttribute('data-nav');
+            document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+
+        // Initialize navigation
+        document.querySelectorAll('[data-nav]').forEach(link => {
+          link.addEventListener('click', handleNavigation);
+        });
+      </script>
+
+      <!-- Body Scripts -->
+      <script id="body-scripts">
+        // This script tag will be replaced with actual scripts.body content
+        if (window.scripts && window.scripts.body) {
+          document.getElementById('body-scripts').outerHTML = window.scripts.body;
+        }
+      </script>
+   </body>
+</html>
+```
+</body-scripts>
+```
+</body-scripts>
+```
+</body-scripts>
+```
+</body-scripts>
